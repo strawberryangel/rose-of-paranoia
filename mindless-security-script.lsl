@@ -6,7 +6,7 @@ key person2  = "xxxxxxxx-xxxx-416f-a2d7-fce0ae13dad6";
 
 region_scan()
 {
-	list avatarsInRegion = llGetAgentList(AGENT_LIST_REGION, []);
+	list avatarsInRegion = llGetAgentList(AGENT_LIST_PARCEL, []);
 	integer numOfAvatars = llGetListLength(avatarsInRegion);
 
 	if (!numOfAvatars) return;
@@ -34,7 +34,7 @@ region_scan()
 
 				if(dist < BAN_DISTANCE)
 				{
-					llSay(PUBLIC_CHANNEL, "Attempting to boot " + composite_name + " who is " + (string)dist + "m away.");
+					// llSay(PUBLIC_CHANNEL, "Attempting to boot " + composite_name + " who is " + (string)dist + "m away.");
 					llTeleportAgentHome(id);
 				}
 			}
