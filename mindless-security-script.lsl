@@ -6,7 +6,7 @@
 
 
 float TIMER_INTERVAL = 5.0;
-float BAN_DISTANCE = 140.0;
+float BAN_DISTANCE = 28.284271247461900976033774484194; // SQRT2 * 20 to cover all of Warmth
 
 region_scan()
 {
